@@ -1,12 +1,16 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage{amssymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{amssymb,amsmath,amsfonts}
 \usepackage{graphicx}
 \graphicspath{{images/}}
 
-\title{AI1110 Assignment 1}
-\author{Dasari Srinith (cs21btech11015)}
-\date{30 March, 2022}
+\addtolength{\topmargin}{-1.0cm}
+\title{\textbf{AI1110 Assignment 1(Paper 2018)}}
+\author{\textbf{Dasari Srinith (cs21btech11015)}}
+\date{}
 
 \setlength{\parindent}{0cm}
 \usepackage{parskip}
@@ -14,41 +18,44 @@
 \begin{document}
 
 \maketitle
-\section*{Paper 2018}
 
+\begin{multicols}{2}
 \section*{Q4 (c)}
-
     Solve $x^2 + 7x = 7$ and give your answer correct to two decimals.
-    
+\vspace{-0.5cm}
 \section*{Solution}
 
     Given,\\
     To Find the roots of $x^2 +7x -7 = 0$.
     
-    We know that for the quadratic equation of form $ax^2 + bx +c = 0$,\\
+    We know that for the quadratic equation of form $ax^2 + bx +c = 0$,
     the roots are
-               $$\displaystyle\frac{-b+\sqrt{b^2 -4ac}}{2a}
-                       ,\displaystyle\frac{-b-\sqrt{b^2 -4ac}}{2a}$$
+    
+    $$\dfrac{-b+\sqrt{b^2 -4ac}}{2a},\dfrac{-b-\sqrt{b^2 -4ac}}{2a}$$
+    
+    $\Rightarrow$ The roots are $\dfrac{-7+\sqrt{49 -4(1)(-7)}}{2(1)}
+                       ,\\\dfrac{-7-\sqrt{49 -4(1)(-7)}}{2(1)}$
                        
-    $\Rightarrow$ The roots are $\displaystyle\frac{-7+\sqrt{49 -4(1)(-7)}}{2(1)}
-                       ,\displaystyle\frac{-7-\sqrt{49 -4(1)(-7)}}{2(1)}$
+    $\Rightarrow$ The roots are $\dfrac{-7+\sqrt{77}}{2}
+                       ,\dfrac{-7-\sqrt{77}}{2}$
                        
-    $\Rightarrow$ The roots are $\displaystyle\frac{-7+\sqrt{77}}{2}
-                       ,\displaystyle\frac{-7-\sqrt{77}}{2}$
+    $\Rightarrow$ The roots are $\dfrac{-7+8.7749}{2}
+                       ,\dfrac{-7-8.7749}{2}$
                        
-    $\Rightarrow$ The roots are $\displaystyle\frac{-7+8.7749}{2}
-                       ,\displaystyle\frac{-7-8.7749}{2}$\\
     ($\sqrt{77}$ can be found by long division method up to four decimals)
-                       
+    
     $\Rightarrow$ The roots are -7.8874, 0.8874
     
     On rounding them off to 2 decimal places we get the roots as -7.89 and 0.89.
     
-    \begin{figure}
-        \includegraphics[width=\textwidth]{plot.png}
-        \caption{Plot showing the polynomial in $x^2 +7x -7 = 0$}
+    \begin{figure}[H]
+        \includegraphics[width=8cm]{plot.png}
     \end{figure}
-    
+    \begin{center}
+        \textbf{Figure :} Plot of $x^2 + 7x - 7 =0 $ (Red) and Blue lines are considered as axes
+    \end{center}
     $\therefore$ The solutions of $x^2 + 7x = 7$ are  $x = -7.89$ and $x = 0.89$.
     
+
+\end{multicols}
 \end{document}
