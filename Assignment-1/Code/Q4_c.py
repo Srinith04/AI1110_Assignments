@@ -23,9 +23,11 @@ plt.plot(x_values,x_axis,color="blue")  # Can be considered as X-Axis
 y_axis = np.linspace(min(y_values), max(y_values), 1000)
 plt.plot(x_axis, y_axis,color="blue")   # Can be considered as Y-Axis
 
-plt.plot(x_values, y_values,color="red")   # Graph of the Quadratic equation
+plt.plot(x_values, y_values,color="red",label ="Graph of $x^2-7x+7=0$")   # Graph of the Quadratic equation
 
-
+plt.legend()
+plt.annotate("X-AXIS",(7.5,-10))
+plt.annotate("Y-AXIS",(0.3,150))
 plt.plot(Roots[0],0,marker='o',markerfacecolor='Black',markeredgecolor='Black')
 plt.plot(Roots[1],0,marker='o',markerfacecolor='Black',markeredgecolor='Black')
 plt.annotate((Roots[0],0),(Roots[0],0),(Roots[0],4))
