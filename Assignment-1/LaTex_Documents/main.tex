@@ -1,25 +1,30 @@
-\documentclass[11pt]{article}
+\documentclass[12pt,letterpaper,twocolumn]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 \usepackage{float}
-\usepackage{multicol}
-\usepackage{amssymb,amsmath,amsfonts}
+\usepackage{enumerate}
+\usepackage[none]{hyphenat}
 \usepackage{graphicx}
-\graphicspath{{images/}}
+\usepackage{parskip}
+\setlength{\parindent}{0cm}
+\pagenumbering{gobble}
 
 \addtolength{\topmargin}{-1.0cm}
+
 \title{\textbf{AI1110 Assignment 1(Paper 2018)}}
 \author{\textbf{Dasari Srinith (cs21btech11015)}}
 \date{}
 
-\setlength{\parindent}{0cm}
-\usepackage{parskip}
-\pagenumbering{gobble}
+
+
+
 \begin{document}
 
 \maketitle
 
-\begin{multicols}{2}
 \section*{Q4 (c)}
     Solve $x^2 + 7x = 7$ and give your answer correct to two decimals.
 \vspace{-0.5cm}
@@ -49,13 +54,11 @@
     On rounding them off to 2 decimal places we get the roots as -7.89 and 0.89.
     
     \begin{figure}[H]
-        \includegraphics[width=8cm]{plot.png}
+        \centering
+        \includegraphics[width=8cm]{_plot_.png}
+        \caption{Plot of $x^2 + 7x - 7 =0 $}
     \end{figure}
-    \begin{center}
-        \textbf{Figure :} Plot of $x^2 + 7x - 7 =0 $ (Red) and Blue lines are considered as axes
-    \end{center}
+ 
     $\therefore$ The solutions of $x^2 + 7x = 7$ are  $x = -7.89$ and $x = 0.89$.
     
-
-\end{multicols}
 \end{document}
