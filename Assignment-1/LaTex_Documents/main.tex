@@ -1,7 +1,7 @@
 \documentclass[12pt,letterpaper,twocolumn]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=1in]{geometry}
-\usepackage{amsmath}
+\usepackage[margin=1in,left=0.7in,right=0.7in]{geometry}
+\usepackage[cmex10]{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{float}
@@ -18,9 +18,6 @@
 \author{\textbf{Dasari Srinith (cs21btech11015)}}
 \date{}
 
-
-
-
 \begin{document}
 
 \maketitle
@@ -35,30 +32,25 @@
     
     We know that for the quadratic equation of form $ax^2 + bx +c = 0$,
     the roots are
+    \begin{align}
+        \dfrac{-b+\sqrt{b^2 -4ac}}{2a}&,\dfrac{-b-\sqrt{b^2 -4ac}}{2a}\\[10pt]
+        \Rightarrow \dfrac{-7+\sqrt{49-4(-7)}}{2(1)}&,\dfrac{-7-\sqrt{49 -4(-7)}}{2(1)}\\[10pt]
+        \Rightarrow \dfrac{-7+\sqrt{77}}{2}&,\dfrac{-7-\sqrt{77}}{2}\\[10pt]
+        \Rightarrow \dfrac{-7+8.7749}{2} &,\dfrac{-7-8.7749}{2}\\[10pt]
+        \Rightarrow -7.8874 &, 0.8874
+    \end{align}
+($\sqrt{77}$ can be found by long division method up to four decimals)
     
-    $$\dfrac{-b+\sqrt{b^2 -4ac}}{2a},\dfrac{-b-\sqrt{b^2 -4ac}}{2a}$$
+$\Rightarrow$ The roots are -7.8874, 0.8874
     
-    $\Rightarrow$ The roots are $\dfrac{-7+\sqrt{49 -4(1)(-7)}}{2(1)}
-                       ,\\\dfrac{-7-\sqrt{49 -4(1)(-7)}}{2(1)}$
-                       
-    $\Rightarrow$ The roots are $\dfrac{-7+\sqrt{77}}{2}
-                       ,\dfrac{-7-\sqrt{77}}{2}$
-                       
-    $\Rightarrow$ The roots are $\dfrac{-7+8.7749}{2}
-                       ,\dfrac{-7-8.7749}{2}$
-                       
-    ($\sqrt{77}$ can be found by long division method up to four decimals)
+On rounding them off to 2 decimal places we get the roots as -7.89 and 0.89.
     
-    $\Rightarrow$ The roots are -7.8874, 0.8874
-    
-    On rounding them off to 2 decimal places we get the roots as -7.89 and 0.89.
-    
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=8cm]{_plot.png}
-        \caption{Plot of $x^2 + 7x - 7 =0 $}
-    \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{_plot.png}
+    \caption{Plot of $x^2 + 7x - 7 =0 $}
+\end{figure}
  
-    $\therefore$ The solutions of $x^2 + 7x = 7$ are  $x = -7.89$ and $x = 0.89$.
+$\therefore$ The solutions of $x^2 + 7x = 7$ are  $x = -7.89$ and $x = 0.89$.
     
 \end{document}
