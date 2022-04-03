@@ -34,5 +34,5 @@ plt.annotate((Roots[0],0),(Roots[0],0),(Roots[0],4))
 plt.annotate((Roots[1],0),(Roots[1],1),(Roots[1],-8))
 # So, That the solutions can be seen and verified on the plot
 
-plt.savefig("../Fig/plot.png")
+plt.savefig("../Fig/_plot_.png")
 plt.show()
