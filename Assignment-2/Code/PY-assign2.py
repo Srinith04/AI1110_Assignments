@@ -44,7 +44,7 @@ plt.fill_between(X, 0, Y, color='orange', alpha=1,label ="Feasible region") #Sha
 
 x = []
 y = []
-with open("Data.txt","r") as fp:
+with open("Points.txt","r") as fp:
     for lines in fp :
         x.append(lines[0:8])
         y.append(lines[10:-1])
