@@ -34,9 +34,9 @@ plt.grid()
 
 plt.plot(X, Y) # Minimum of the 3 graphs
  
-plt.plot(X, Y1,color= "red",label ="y = 0") # X-AXIS
+plt.plot(X, Y1,color= "red") # X-AXIS
 
-plt.plot(Y1, P,color = "green",label="x = 0") # Y-AXIS
+plt.plot(Y1, P,color = "green") # Y-AXIS
 
 plt.fill_between(X, 0, Y, color='orange', alpha=1,label ="Feasible region") #Shading the feasible region.
 
