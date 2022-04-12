@@ -15,4 +15,4 @@ prob = cp.Problem(obj , constraints)
 
 prob.solve()
 
-print("%f and %f"%(x.value,y.value))
+print("The carpenter should produce %f units of Product A and %f units of Product B for maximum gross income."%(x.value,y.value))
