@@ -14,6 +14,9 @@
 
 \begin{document}
 
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+
 \title{AI1103 ASSIGNMENT-2}
 \author{DASARI SRINITH \\\vspace*{20pt} \Large ICSE 2019 Grade 12}
 \maketitle
@@ -85,16 +88,16 @@ which can be expressed in vector form as
         \end{align}
         The Lagrangian, defined as the linear combination of the loss function and the constraints is defined as
         \begin{multline}
-	        L\left({\vec{x},\bm{\lambda}}\right) =-\myvec{48 & 40}\vec{x} \\
-	        + \lambda_1\left[{\myvec{2 & 1}\vec{x}-90}\right] \\
-    	    + \lambda_2\left[{\myvec{1 & 2}\vec{x}-80}\right]
-    	    + \lambda_3\left[{\myvec{1 & 1}\vec{x}-50}\right] \\
-            + \lambda_4\left[{\myvec{-1 & 0}\vec{x}}\right] \\
-            + \lambda_5\left[{\myvec{0 & -1}\vec{x}}\right]
+	        L\brak{\vec{x},\bm{\lambda}} =-\myvec{48 & 40}\vec{x} \\
+	        + \lambda_1\sbrak{\myvec{2 & 1}\vec{x}-90} \\
+    	    + \lambda_2\sbrak{\myvec{1 & 2}\vec{x}-80}
+    	    + \lambda_3\sbrak{\myvec{1 & 1}\vec{x}-50} \\
+            + \lambda_4\sbrak{\myvec{-1 & 0}\vec{x}} \\
+            + \lambda_5\sbrak{\myvec{0 & -1}\vec{x}}
         \end{multline}
         Taking the derivative
         \begin{align}
-	        {\nabla L\left({\vec{x},\bm{\lambda}}\right)} = 0,
+	        {\nabla L\brak{\vec{x},\bm{\lambda}} = 0,
         \end{align}
         we obtain 
         \begin{align}
