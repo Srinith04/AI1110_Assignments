@@ -6,7 +6,7 @@ from numpy import random as RN
 
 # Importing data from excel
 
-read = pd.read_excel(r'assign5/data.xlsx')
+read = pd.read_excel(r'Tables/data.xlsx')
 raw_data = np.array(read)
 
 # It is given that data was taken from 40 students , so sample space ,
