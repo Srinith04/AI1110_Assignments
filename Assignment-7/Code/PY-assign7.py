@@ -22,14 +22,14 @@ def P(x):
 
 # Let us take a random variable x , which take any value from 1 to 8 inclusive over the size N ,
 x = RN.randint(1, 9, size=N)
-# and if x = {1} , then we shall take TTT
-# and if x = {2} , then we shall take TTH
-# and if x = {3} , then we shall take THT
-# and if x = {4} , then we shall take HTT
-# and if x = {5} , then we shall take HHT
-# and if x = {6} , then we shall take HTH
-# and if x = {7} , then we shall take THH
-# and if x = {8} , then we shall take HHH
+# and if x = {1} , then we shall take 000
+# and if x = {2} , then we shall take 001
+# and if x = {3} , then we shall take 010
+# and if x = {4} , then we shall take 100
+# and if x = {5} , then we shall take 011
+# and if x = {6} , then we shall take 101
+# and if x = {7} , then we shall take 110
+# and if x = {8} , then we shall take 111
 
 #NOTE : The initials of events are same as that of the solution.
 
