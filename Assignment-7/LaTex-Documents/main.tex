@@ -265,21 +265,31 @@ Three coins are tossed. Describe
 
 \textbf{SOLUTION :}
 
-Since a coin can either turn up Tail(0) or Head(1) ,each with equal probability of 0.5 and the possible outcomes when 3 coins are tossed are (or) the sample space contains ,
-\begin{align}
-	\text{S} = \cbrak{000,001,010,100,011,101,110,111}
-\end{align}
-
-Let $X$ be a binomial random variable, with parameters $n$ and $p$ , where
 \begin{enumerate}
-    \item $n$ = No.of trials = 3
-    \item $p$ = Probability with which we get a favourable outcome (here let us consider getting Head as a favourable outcome) = $\dfrac{1}{2}$
+    \item Let us consider the trial of tossing a coin once. And let us label the outcome of the trial with the Bernoulli random variable $Y$.
+    \item Let us label the outcomes 1(Head) and 0(Tail) respectively for success and failure , let
+	    \begin{align}
+		\pr{Y=1} &= p \\
+		\pr{Y=0} &= 1-p
+	    \end{align}
+    \item Now let us consider three Bernoulli trials for tossing a coin. Let $X$ be a binomial random variable for the trials, with parameters $n$ and $p$ , where
+	    \begin{enumerate}
+		\item $n$ = No.of trials = 3
+		\item $p$ = Probability with which we get a favourable outcome (here let us consider getting Head as a favourable outcome) = 0.5
+	    \end{enumerate}
+    \item So ,
+	    \begin{enumerate}
+		\item The possible outcomes when 3 coins are tossed are (or) the sample space contains ,
+			\begin{align}
+			    \text{S} = \cbrak{000,001,010,100,011,101,110,111}
+			\end{align}
+		\item 
+			\begin{align}
+			    \pr{X = k} = \comb{n}{k} p^k\brak{1-p}^{n-k}
+			\end{align}
+			where $k= 0,\dots, n$ is number of heads according to this question.
+	    \end{enumerate}
 \end{enumerate}
-then ,
-\begin{align}
-    \pr{X = k} = \comb{n}{k} p^k\brak{1-p}^{n-k}, \quad k = 0,\dots, n
-\end{align}
-where k is number of heads according to this question.
 
 We can tabulate the probabilities of each event into a binomial probability table as shown in Table \ref{Table1}
 \begin{table}[ht!]
