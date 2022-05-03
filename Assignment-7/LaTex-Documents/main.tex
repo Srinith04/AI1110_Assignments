@@ -268,27 +268,27 @@ Three coins are tossed. Describe
 \begin{enumerate}
     \item Let us consider the trial of tossing a coin once. And let us label the outcome of the trial with the Bernoulli random variable $Y$.
     \item Let us label the outcomes 1(Head) and 0(Tail) respectively for success and failure , let
-	    \begin{align}
-		\pr{Y=1} &= p \\
-		\pr{Y=0} &= 1-p
-	    \end{align}
+    \begin{align}
+        \pr{Y=1} &= p \\
+        \pr{Y=0} &= 1-p
+    \end{align}
     \item Now let us consider three Bernoulli trials for tossing a coin. Let $X$ be a binomial random variable for the trials, with parameters $n$ and $p$ , where
-	    \begin{enumerate}
-		\item $n$ = No.of trials = 3
-		\item $p$ = Probability with which we get a favourable outcome (here let us consider getting Head as a favourable outcome) = 0.5
-	    \end{enumerate}
+    \begin{enumerate}
+        \item $n$ = No.of trials = 3
+        \item $p$ = Probability with which we get a favourable outcome (here let us consider getting Head as a favourable outcome) = 0.5
+    \end{enumerate}
     \item So ,
-	    \begin{enumerate}
-		\item The possible outcomes when 3 coins are tossed are (or) the sample space contains ,
-			\begin{align}
-			    \text{S} = \cbrak{000,001,010,100,011,101,110,111}
-			\end{align}
-		\item 
-			\begin{align}
-			    \pr{X = k} = \comb{n}{k} p^k\brak{1-p}^{n-k}
-			\end{align}
-			where $k= 0,\dots, n$ is number of heads according to this question.
-	    \end{enumerate}
+    \begin{enumerate}
+        \item The possible outcomes when 3 coins are tossed are (or) the sample space contains ,
+        \begin{align}
+    	    \text{S} = \cbrak{000,001,010,100,011,101,110,111}
+        \end{align}
+        \item 
+        \begin{align}
+            \pr{X = k} = \comb{n}{k} p^k\brak{1-p}^{n-k}
+        \end{align}
+        where $k= 0,\dots, n$ is number of heads according to this question.
+    \end{enumerate}
 \end{enumerate}
 
 We can tabulate the probabilities of each event into a binomial probability table as shown in Table \ref{Table1}
@@ -303,123 +303,108 @@ We can tabulate the probabilities of each event into a binomial probability tabl
     \item 
     \textbf{Two events which are mutually exclusive} 
     
-    Let us take the events A,B as shown in Table \ref{Table2}.
+    Let us take the two events as shown in Table \ref{Table2}.
     \begin{table}[ht!]
+    \def\arraystretch{1.75}
         \input{Tables/TABLE2.tex}
         \caption{Events for question 1}
         \label{Table2}
     \end{table}
-    So ,
+    
+    Since ,
     \begin{align}
-        A &= \cbrak{ (X=3) }\\
-        B &= \cbrak{ (X=0) }
+        \pr{(X=3) \cap (X=0)} = 0
     \end{align}
-    and Since ,
-    \begin{align}
-        \pr{A \cap B} = \pr{(X=3) \cap (X=0)} = 0
-    \end{align}
-    So ,events A and B are mutually exclusive.
+    So ,the two events are mutually exclusive.
   
     \item \textbf{Three events which are mutually exclusive and exhaustive}
     
-    Let us take events C,D,E as shown in Table \ref{Table3}.
+    Let us take the three events as shown in Table \ref{Table3}.
     \begin{table}[ht!]
+    \def\arraystretch{1.75}
         \input{Tables/TABLE3.tex}
         \caption{Events for question 2}
         \label{Table3}
     \end{table}
-    So ,
+    
+    Since , 
     \begin{align}
-        C &= \cbrak{(X=0)} \\
-        D &= \cbrak{(X=1)} \\
-	    E &=  \cbrak{(X=2) \cup (X=3)}
+        \pr{(X=0) \cap (X=1)} &= 0 \\
+        \pr{(X=1) \cap (X \ge 2)} &= 0 \\
+        \pr{(X=0) \cap (X \ge 2)} &= 0
     \end{align}
-    and Since , 
+    We can say that , the three events are mutually exclusive. 
+    \begin{multline}
+        \pr{(X=0) \cup (X=1) \cup (X \ge 2)} \\ = \pr{(X \ge 0)}
+    \end{multline}
+    And from Table \ref{Table3},    
     \begin{align}
-        \pr{C \cap D} &= 0 \\
-        \pr{D \cap E} &= 0 \\
-        \pr{C \cap E} &= 0
-    \end{align}
-    We can say that , events C,D,E are mutually exclusive. And from Table \ref{Table1},
-    \begin{align}
-        \pr{C \cup D \cup E} &= \pr{(X \ge 0)} \\[10pt]
-                             &= \dfrac{1}{8}+\dfrac{3}{8}+\dfrac{3}{8}+\dfrac{1}{8} = 1
+        \pr{(X \ge 0)} &= \dfrac{1}{8}+\dfrac{3}{8}+\dfrac{3}{8}+\dfrac{1}{8} = 1
     \end{align}  
-    So, events C,D,E are mutually exclusive and exhaustive.
+    So, the three events  are mutually exclusive and exhaustive.
     
     \item \textbf{Two events ,which are not mutually exclusive}
     
-    Let us take the events F,G as shown in Table \ref{Table4}.
+    Let us take the two events as shown in Table \ref{Table4}.
     \begin{table}[ht!]
+    \def\arraystretch{1.75}
         \input{Tables/TABLE4.tex}
         \caption{Events for question 3}
         \label{Table4}
     \end{table}
-    So ,
+
+    Since from Table \ref{Table4},
     \begin{align}
-        F &= \cbrak{(X=3)} \\
-	    G &=  \cbrak{(X=2) \cup (X=3)}
+        \pr{(X=3) \cap (X \ge 2} = \pr{(X=3)} 
     \end{align}
-    and Since from Table \ref{Table1},
     \begin{align}
-        \pr{F \cap G} = \pr{(X=3)} = \dfrac{1}{8} \neq 0
+        \pr{(X=3)} = \dfrac{1}{8} \neq 0
     \end{align}
-    So ,events F and G are not mutually exclusive.
+    So ,the two events are not mutually exclusive.
   
     \item \textbf{Two events ,which are mutually exclusive but not exhaustive}
     
-    Let us take the events H,I as shown in Table \ref{Table5}.
+    Let us take the two events as shown in Table \ref{Table5}.
     \begin{table}[ht!]
+    \def\arraystretch{1.75}
         \input{Tables/TABLE5.tex}
         \caption{Events for question 4}
         \label{Table5}
     \end{table}
-    So ,
+    Since ,
     \begin{align}
-        H &= \cbrak{ (X=3) } \\
-        I &= \cbrak{ (X=0) }
+        \pr{(X=3) \cap (X=0)} = 0
     \end{align}
-    and Since ,
+    So ,the two events are mutually exclusive. And from Table \ref{Table5},
     \begin{align}
-        \pr{H \cap I} = 0
+        \pr{(X=3) \cup (X=0)} &= \dfrac{1}{8} + \dfrac{1}{8}\\[10pt]
+                      &= \dfrac{1}{4} \neq 1
     \end{align}
-    So ,events H and I are mutually exclusive. And from Table \ref{Table1},
-    \begin{align}
-        \pr{H \cup I} &= \pr{(X=0)} + \pr{(X=3)} \\
-                      &= \dfrac{1}{8} + \dfrac{1}{8} = \dfrac{1}{4} \neq 1
-    \end{align}
-    So , events H and I are mutually exclusive but not exhaustive.
+    So , the two events are mutually exclusive but not exhaustive.
     
     \item \textbf{Three events which are mutually exclusive but not exhaustive}
     
-    Let us take events J,K,L as shown in Table \ref{Table6}.
+    Let us take the three events as shown in Table \ref{Table6}.
     \begin{table}[ht!]
+    \def\arraystretch{1.75}
         \input{Tables/TABLE6.tex}
         \caption{Events for question 5}
         \label{Table6}
     \end{table}
-    So ,
+    Since , 
     \begin{align}
-        J &= \cbrak{ (X=0) } \\
-        K &= \cbrak{ (X=1) } \\
-        L &= \cbrak{ (X=2) }
+        \pr{(X=0) \cap (X=1)} &= 0 \\
+        \pr{(X=1) \cap (X=2)} &= 0 \\
+        \pr{(X=0) \cap (X=2)} &= 0
     \end{align}
-    and Since , 
-    \begin{align}
-        \pr{J \cap K} &= 0 \\
-        \pr{K \cap L} &= 0 \\
-        \pr{J \cap L} &= 0
-    \end{align}
-    We can say that , events J,K,L are mutually exclusive. And from Table \ref{Table1},
+    We can say that , the three events are mutually exclusive.
+    
+    And from Table \ref{Table6},
     \begin{multline}
-        \pr{J \cup K \cup L} = \pr{(X=0)} \\
-        + \pr{(X=1)} + \pr{(X=2)} 
+        \pr{(X=0) \cup (X=1) \cup (X=2)}  \\ =
+        \dfrac{1}{8}+\dfrac{3}{8}+\dfrac{3}{8}+\dfrac{1}{8} = 1 
     \end{multline}
-    \begin{align}
-        \pr{J \cup K \cup L} &= \dfrac{1}{8} + \dfrac{3}{8} + \dfrac{3}{8} = \dfrac{7}{8}\\[10pt]
-                             &\neq 1 
-    \end{align}  
-    So, events J,K,L are mutually exclusive but not exhaustive.
+    So, the three events are mutually exclusive but not exhaustive.
     
 \end{enumerate}
 
