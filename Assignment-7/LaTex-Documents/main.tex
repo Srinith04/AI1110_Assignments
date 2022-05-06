@@ -163,7 +163,6 @@ columns=fullflexible
      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
      
-
 \title{
 	AI1110 ASSIGNMENT-7
 }
@@ -253,7 +252,6 @@ This document contains the solution for Assignment 7 (NCERT GRADE 11 CHAPTER 16 
 \end{abstract}
 %template ends here
 \textbf{QUESTION 5 :}
-
 Three coins are tossed. Describe 
 \begin{enumerate}[label=(\roman{enumi})]
     \item Two events which are mutually exclusive.
@@ -262,9 +260,7 @@ Three coins are tossed. Describe
     \item Two events which are mutually exclusive but not exhaustive.
     \item Three events which are mutually exclusive but not exhaustive.
 \end{enumerate}
-
 \textbf{SOLUTION :}
-
 \begin{enumerate}
     \item Let us consider the trial of tossing a coin once. And let us label the outcome of the trial with the Bernoulli random variable $Y$.
     \item Let us label the outcomes 1(Head) and 0(Tail) respectively for success and failure , let
@@ -290,7 +286,6 @@ Three coins are tossed. Describe
         where $k= 0,\dots, n$ is number of heads according to this question.
     \end{enumerate}
 \end{enumerate}
-
 We can tabulate the probabilities of each event into a binomial probability table as shown in Table \ref{Table1}
 \begin{table}[ht!]
 \def\arraystretch{1.75}
@@ -298,7 +293,6 @@ We can tabulate the probabilities of each event into a binomial probability tabl
         \caption{Binomial Probability Distribution}
         \label{Table1}
     \end{table}
-
 \begin{enumerate}[label=(\roman*)]
     \item 
     \textbf{Two events which are mutually exclusive} 
@@ -313,7 +307,7 @@ We can tabulate the probabilities of each event into a binomial probability tabl
     
     Since ,
     \begin{align}
-        \pr{(X=3) \cap (X=0)} = 0
+        \pr{(X=3)(X=0)} = 0
     \end{align}
     So ,the two events are mutually exclusive.
   
@@ -329,13 +323,13 @@ We can tabulate the probabilities of each event into a binomial probability tabl
     
     Since , 
     \begin{align}
-        \pr{(X=0) \cap (X=1)} &= 0 \\
-        \pr{(X=1) \cap (X \ge 2)} &= 0 \\
-        \pr{(X=0) \cap (X \ge 2)} &= 0
+        \pr{(X=0)(X=1)} &= 0 \\
+        \pr{(X=1)(X \ge 2)} &= 0 \\
+        \pr{(X=0)(X \ge 2)} &= 0
     \end{align}
     We can say that , the three events are mutually exclusive. 
     \begin{multline}
-        \pr{(X=0) \cup (X=1) \cup (X \ge 2)} \\ = \pr{(X \ge 0)}
+        \pr{(X=0) + (X=1) + (X \ge 2)} \\ = \pr{(X \ge 0)}
     \end{multline}
     And from Table \ref{Table3},    
     \begin{align}
@@ -352,10 +346,9 @@ We can tabulate the probabilities of each event into a binomial probability tabl
         \caption{Events for question 3}
         \label{Table4}
     \end{table}
-
     Since from Table \ref{Table4},
     \begin{align}
-        \pr{(X=3) \cap (X \ge 2} = \pr{(X=3)} 
+        \pr{(X=3)(X \ge 2} = \pr{(X=3)} 
     \end{align}
     \begin{align}
         \pr{(X=3)} = \dfrac{1}{8} \neq 0
@@ -373,11 +366,11 @@ We can tabulate the probabilities of each event into a binomial probability tabl
     \end{table}
     Since ,
     \begin{align}
-        \pr{(X=3) \cap (X=0)} = 0
+        \pr{(X=3)(X=0)} = 0
     \end{align}
     So ,the two events are mutually exclusive. And from Table \ref{Table5},
     \begin{align}
-        \pr{(X=3) \cup (X=0)} &= \dfrac{1}{8} + \dfrac{1}{8}\\[10pt]
+        \pr{(X=3) + (X=0)} &= \dfrac{1}{8} + \dfrac{1}{8}\\[10pt]
                       &= \dfrac{1}{4} \neq 1
     \end{align}
     So , the two events are mutually exclusive but not exhaustive.
@@ -393,19 +386,18 @@ We can tabulate the probabilities of each event into a binomial probability tabl
     \end{table}
     Since , 
     \begin{align}
-        \pr{(X=0) \cap (X=1)} &= 0 \\
-        \pr{(X=1) \cap (X=2)} &= 0 \\
-        \pr{(X=0) \cap (X=2)} &= 0
+        \pr{(X=0)(X=1)} &= 0 \\
+        \pr{(X=1)(X=2)} &= 0 \\
+        \pr{(X=0)(X=2)} &= 0
     \end{align}
     We can say that , the three events are mutually exclusive.
     
     And from Table \ref{Table6},
     \begin{multline}
-        \pr{(X=0) \cup (X=1) \cup (X=2)}  \\ =
+        \pr{(X=0) + (X=1) + (X=2)}  \\ =
         \dfrac{1}{8}+\dfrac{3}{8}+\dfrac{3}{8}+\dfrac{1}{8} = 1 
     \end{multline}
     So, the three events are mutually exclusive but not exhaustive.
     
 \end{enumerate}
-
 \end{document}
