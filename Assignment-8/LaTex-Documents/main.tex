@@ -257,37 +257,48 @@ Three cards are drawn successively, without replacement from a pack of 52 well s
 
 \textbf{SOLUTION :}
 
-In a deck of 52 cards there are 4 King cards and 4 Ace cards in total. Let us also define events as in Table \ref{Table1}
+In a deck of 52 cards there are 4 King cards and 4 Ace cards in total. Let us take three random variables $X$,$Y$,$Z$ for three trials of drawing a card each of which takes values from the set of real numbers {0,1,2} . Let us define those events in Table \ref{Table1}, Table \ref{Table2}, Table \ref{Table3}.
 
 \begin{table}[ht!]
     \input{Tables/TABLE1.tex}
-    \caption{Defining the events}
+    \caption{Defining the events for first draw}
     \label{Table1}
 \end{table}
-    
-We have to find $\pr{(X=0)(X=0)(X=1)}$.
+
+\begin{table}[ht!]
+    \input{Tables/TABLE2.tex}
+    \caption{Defining the events for second draw}
+    \label{Table2}
+\end{table}
+
+\begin{table}[ht!]
+    \input{Tables/TABLE3.tex}
+    \caption{Defining the events for third draw}
+    \label{Table3}
+\end{table}
+We have to find $\pr{(X=0)(Y=0)(Z=1)}$.
 
 We know that ,
 \begin{align}
     \pr{(X=0)} &= \dfrac{\text{Number of Kings}}{\text{Total number of cards}} \\[10pt]
     \pr{(X=0)} &= \dfrac{4}{52}
 \end{align}
-and , also \pr{(X=0)|(X=0)} is the probability of second king with the condition that one king has already been drawn . As now ,there are 3 Kings in 51 cards .
+and , also \pr{(Y=0)|(X=0)} is the probability of second king with the condition that one king has already been drawn . As now ,there are 3 Kings in 51 cards .
 \begin{align}
-    \pr{(X=0)|(X=0)} = \dfrac{3}{51}
+    \pr{(Y=0)|(X=0)} = \dfrac{3}{51}
 \end{align}
-Lastly , \pr{(X=1)|(X=0)(X=0)} is the probability of third drawn card to be an ace ,with the condition that two kings have already been drawn . As now , there are 4 aces in 50 cards .
+Lastly , \pr{(Z=1)|(Y=0)(X=0)} is the probability of third drawn card to be an ace ,with the condition that two kings have already been drawn . As now , there are 4 aces in 50 cards .
 \begin{align}
-    \pr{(X=1)|(X=0)(X=0)} = \dfrac{4}{50}
+    \pr{(Z=1)|(Y=0)(X=0)} = \dfrac{4}{50}
 \end{align}
 By multiplication law of probability ,we have
 \begin{multline}
-    \pr{(X=0)(X=0)(X=1)} = \\
-    \pr{(X=0)} \pr{(X=0)|(X=1)}\\
-            \pr{(X=1)|(X=0)(X=0)}
+    \pr{(X=0)(Y=0)(Z=1)} = \\
+    \pr{(X=0)} \pr{(Y=0)|(X=0)}\\
+            \pr{(Z=1)|(X=0)(Y=0)}
 \end{multline}
 \begin{align}
-    \pr{(X=0)(X=0)(X=1)} &= \dfrac{4}{52}\dfrac{3}{51}\dfrac{4}{50} \\[10pt]
+    \pr{(X=0)(Y=0)(Z=1)} &= \dfrac{4}{52}\dfrac{3}{51}\dfrac{4}{50} \\[10pt]
                          &= \dfrac{2}{5525}
 \end{align}
 
