@@ -276,7 +276,7 @@ In a deck of 52 cards there are 4 King cards and 4 Ace cards in total. Let us ta
     \caption{Defining the events for third draw}
     \label{Table3}
 \end{table}
-We have to find $\pr{(X=0)(Y=0)(Z=1)}$.
+We have to find $\pr{(X=0),(Y=0),(Z=1)}$.
 
 We know that ,
 \begin{align}
@@ -287,15 +287,15 @@ and , also \pr{(Y=0)|(X=0)} is the probability of second king with the condition
 \begin{align}
     \pr{(Y=0)|(X=0)} = \dfrac{3}{51}
 \end{align}
-Lastly , \pr{(Z=1)|(Y=0)(X=0)} is the probability of third drawn card to be an ace ,with the condition that two kings have already been drawn . As now , there are 4 aces in 50 cards .
+Lastly , \pr{(Z=1)|(Y=0),(X=0)} is the probability of third drawn card to be an ace ,with the condition that two kings have already been drawn . As now , there are 4 aces in 50 cards .
 \begin{align}
-    \pr{(Z=1)|(Y=0)(X=0)} = \dfrac{4}{50}
+    \pr{(Z=1)|(Y=0),(X=0)} = \dfrac{4}{50}
 \end{align}
 By multiplication law of probability ,we have
 \begin{multline}
-    \pr{(X=0)(Y=0)(Z=1)} = \\
+    \pr{(X=0),(Y=0),(Z=1)} = \\
     \pr{(X=0)} \pr{(Y=0)|(X=0)}\\
-            \pr{(Z=1)|(X=0)(Y=0)}
+            \pr{(Z=1)|(X=0),(Y=0)}
 \end{multline}
 \begin{align}
     \pr{(X=0)(Y=0)(Z=1)} &= \dfrac{4}{52}\dfrac{3}{51}\dfrac{4}{50} \\[10pt]
