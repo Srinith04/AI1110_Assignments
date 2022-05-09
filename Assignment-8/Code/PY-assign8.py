@@ -14,7 +14,7 @@ n_0 = 4
 pr_0 = n_0/T                           # pr(X=0)
 pr_1 = n_1/T                           # pr(X=1)
 pr_0_0 = (n_0-1)/(T-1)                 # pr((X=0)|(X=0))
-pr_1_00 = n_1/(T-2)                    # pr((X=1)|(X=0)(X=0))
+pr_1_00 = n_1/(T-2)                    # pr((X=1)|(X=0),(X=0))
 
 print("Theoretical Probability : ",pr_0 * pr_0_0 * pr_1_00)
 
