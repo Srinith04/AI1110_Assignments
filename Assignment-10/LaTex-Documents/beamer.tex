@@ -100,6 +100,18 @@
             \end{align}
             for $x = 0,1,2,...,n-1,n$ 
         \end{frame}
+        
+        \begin{frame}{Mean}
+        \begin{align}
+            \mu &= \sum^{n}_{i=1} x_i P(x_i) \\
+            \mu &= \sum^{n}_{r=1} r \times \Comb{n}{r} p^r\brak{1-p}^{n-r} \\
+            \mu &= (1-p)^{n} \sum^{n}_{r=1} r \times                 \Comb{n}{r}\brak{\dfrac{p}{1-p}}^r \\
+            \mu &= (1-p)^{n} \dfrac{np}{(1-p)^{n}} \\
+            \mu &= np
+            \label{eq:6}
+        \end{align}
+            
+        \end{frame}
     
     \section{Solution}
     \begin{frame}{Solution}
@@ -128,11 +140,10 @@
     \end{frame}
     
     \begin{frame}{Mean ($\mu$)}
+    We know that, from \eqref{eq:6}
         \begin{align}
-            \mu &= \sum^{4}_{i=1} x_i P(x_i) \\
-                &= 0 + 4 \times \dfrac{2^3}{3^4} + 2 \times 6 \times \dfrac{2^2}{3^4} + 3 \times 4 \times \dfrac{2}{3^4} + 4 \times 1 \times \dfrac{1}{3^4} \\[10pt]
-                &= \dfrac{32 + 48 + 24 + 4}{3^4} \\[10pt]
-                &= \dfrac{108}{81} = \dfrac{4}{3}
+            \mu &= np \\
+            \mu &= \dfrac{4}{3}
         \end{align}
     \end{frame}
     
@@ -142,3 +153,5 @@
     \end{frame}
 
 \end{document}
+
+
