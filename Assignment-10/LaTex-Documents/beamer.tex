@@ -42,7 +42,8 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{txfonts}
-
+\usepackage{mathtools}  
+\usepackage{diffcoeff} 
 \def\inputGnumericTable{}
 
 \usepackage[latin1]{inputenc}                                 
@@ -102,12 +103,29 @@
         \end{frame}
         
         \begin{frame}{Mean}
+        The mean of X is defined as \\
         \begin{align}
-            \mu &= \sum^{n}_{i=1} x_i P(x_i) \\
-            \mu &= \sum^{n}_{r=1} r \times \Comb{n}{r} p^r\brak{1-p}^{n-r} \\
-            \mu &= (1-p)^{n} \sum^{n}_{r=1} r \times                 \Comb{n}{r}\brak{\dfrac{p}{1-p}}^r \\
-            \mu &= (1-p)^{n} \dfrac{np}{(1-p)^{n}} \\
-            \mu &= np
+            E(X) &= \diffp {M_x(z^{-1})}z{z=1} 
+        \end{align}
+        We know that
+        \begin{align}
+            M_x(z^{-1}) &= \sum^{\infty}_{k=-\infty} z^k P_x(k) \\[10pt]
+            M_x(z^{-1}) &= \sum^{\infty}_{k=-\infty} z^k \times \Comb{n}{k} p^k\brak{1-p}^{n-k} \\[10pt]
+            M_x(z^{-1}) &= \sum^{\infty}_{k=-\infty} \Comb{n}{k} (zp)^k\brak{1-p}^{n-k}
+        \end{align}
+        \end{frame}
+        
+        \begin{frame}
+        \begin{align}
+        M_x(z^{-1}) &= \sum^{n}_{k=0} \Comb{n}{k} (zp)^k\brak{1-p}^{n-k} \\[10pt]
+            M_x(z^{-1}) &=  (zp + 1 - p)^n 
+            \end{align}
+            SO, Mean is ,
+            \begin{align}
+            E(X) &= \diffp {(zp + 1 - p)^n}z{z=1} \\[10pt]
+            E(X) &= np  \times (zp + 1 - p)^{n-1} \\
+            E(X) &= np \times 1 \\
+            E(X) &= np
             \label{eq:6}
         \end{align}
             
