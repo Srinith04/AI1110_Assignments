@@ -1,0 +1,143 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+%packages:
+% \usepackage{tfrupee}
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage{gensymb}
+% \usepackage{txfonts}
+
+% \def\inputGnumericTable{}
+
+% \usepackage[latin1]{inputenc}                                 
+% \usepackage{color}                                            
+% \usepackage{array}                                            
+% \usepackage{longtable}                                        
+% \usepackage{calc}                                             
+% \usepackage{multirow}                                         
+% \usepackage{hhline}                                           
+% \usepackage{ifthen}
+% \usepackage{caption} 
+% \captionsetup[table]{skip=3pt}  
+% \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+% \providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+% %\renewcommand{\thefigure}{\arabic{table}}
+% \renewcommand{\thetable}{\arabic{table}}      
+
+\setbeamertemplate{caption}[numbered]{}
+
+\usepackage{enumitem}
+\usepackage{tfrupee}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{txfonts}
+\usepackage{mathtools}  
+\usepackage{diffcoeff} 
+\def\inputGnumericTable{}
+
+\usepackage[latin1]{inputenc}                                 
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                        
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}
+\usepackage{caption} 
+%\captionsetup[table]{skip=3pt}  
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\renewcommand{\thefigure}{\arabic{table}}
+\renewcommand{\thetable}{\arabic{table}}   
+\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Title page details: 
+\title{Assignment 12} 
+\author{Dasari Srinith}
+\date{\today}
+% \logo{\large \LaTeX{}}
+
+
+\begin{document}
+
+    % Title page
+    \begin{frame}
+        \titlepage 
+    \end{frame}
+
+    % Outline
+    \begin{frame}{Outline}
+        \tableofcontents
+    \end{frame}
+
+    \section{Question}
+    	\begin{frame}{Ex 6.6}
+    	Show that
+    	\begin{align}
+    	    E\{y|x \le 0\} = \dfrac{1}{F_x(0)} \int_{-\infty}^{0} E\{y|x\}f_x(x) \,dx
+    	\end{align}
+    	\end{frame}
+
+    \section{Theory}
+        \begin{frame}{Theory}
+        \begin{align}
+            F_y\{y|X<x\} = \dfrac{P(X \le x,Y \le y)}{X \le x} = \dfrac{F(x,y)}{F_x(x)} 
+        \end{align}
+        \begin{align}
+            f_y\{y|X<x\} = \dfrac{1}{F_x(x)}  \frac{\partial F(x,y)}{\partial y} 
+            \label{eq:3}
+        \end{align}
+        \end{frame}
+
+    
+    \section{Solution}
+    \begin{frame}{Solution}
+    \begin{align}
+        E\{y|x \le 0\} &= \int_{-\infty}^{\infty} y. f_y(y|x \le 0) \,dy 
+    \end{align}
+    From \eqref{eq:3} we can write,
+    \begin{align}
+        E\{y|x \le 0\} &= \int_{-\infty}^{\infty} y. \cbrak{\dfrac{1}{F_x(0)}  \frac{\partial F(0,y)}{\partial y}} \,dy \\[10pt]
+        E\{y|x \le 0\} &= \dfrac{1}{F_x(0)} \int_{-\infty}^{\infty} y. \cbrak{  \frac{\partial F(0,y)}{\partial y}} \,dy
+        \label{eq:5}
+    \end{align}
+    \end{frame}
+    
+    
+    \begin{frame}{}
+    And ,
+        \begin{align}
+            \int_{-\infty}^{0} E\{y|x\}f_x(x) \,dx &= \int_{-\infty}^{0} \cbrak{\int_{-\infty}^{\infty} y f(y|x)\,dy} f_x(x)\,dx \\[10pt]
+            \int_{-\infty}^{0} E\{y|x\}f_x(x) \,dx &= \int_{-\infty}^{\infty} y \cbrak{\int_{-\infty}^{0} f(y|x)f_x(x)\,dy} \,dx \\[10pt]
+            \int_{-\infty}^{0} E\{y|x\}f_x(x) \,dx &= \int_{-\infty}^{\infty} y \cbrak{\int_{-\infty}^{0} f(x,y) \,dy }\,dx \\[10pt]
+            \int_{-\infty}^{0} E\{y|x\}f_x(x) \,dx &= \int_{-\infty}^{\infty} y \cbrak{\frac{\partial F(0,y)}{\partial y}} \,dx
+            \label{eq:9}
+        \end{align}
+    \end{frame}
+    
+    \begin{frame}{}
+    So ,  from \eqref{eq:5} , \eqref{eq:9}
+        \begin{align}
+            E\{y|x \le 0\} = \dfrac{1}{F_x(0)} \int_{-\infty}^{0} E\{y|x\}f_x(x) \,dx
+        \end{align}
+    \end{frame}
+
+
+\end{document}
+
+
