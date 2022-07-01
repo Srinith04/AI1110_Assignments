@@ -305,7 +305,7 @@ void gaussian(char *str, int len)
             temp += (double)rand()/RAND_MAX;
         }
         temp-=6;
-        if(temp>=4)
+        if(temp>=5)
         {
             printf("%lf\n",temp);
         }
